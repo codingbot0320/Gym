@@ -2,39 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Professional Gym Design System - Dark, Bold, High-Impact
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 8%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 0% 98%;
+
+    /* Gym-specific design tokens */
+    --hero-bg: 0 0% 5%;
+    --hero-overlay: 0 0% 0% / 0.6;
+    --section-bg: 0 0% 10%;
+    --gradient-primary: linear-gradient(135deg, hsl(var(--accent)), hsl(45 100% 60%));
+    --gradient-dark: linear-gradient(180deg, hsl(var(--background)), hsl(var(--section-bg)));
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.3);
+    --shadow-elevated: 0 10px 40px -15px hsl(0 0% 0% / 0.8);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
 
@@ -101,5 +111,151 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-section {
+    @apply relative min-h-screen flex items-center justify-center overflow-hidden;
+    background: hsl(var(--hero-bg));
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 z-10;
+    background: hsl(var(--hero-overlay));
+  }
+
+  .hero-content {
+    @apply relative z-20 text-center px-4;
+  }
+
+  .hero-title {
+    @apply text-6xl md:text-8xl font-black tracking-tight leading-none;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 60px hsl(var(--accent) / 0.5);
+  }
+
+  /* Section Styles */
+  .section-dark {
+    @apply bg-[hsl(var(--section-bg))] py-24;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-6xl font-bold text-center mb-16 tracking-tight;
+  }
+
+  /* Card Styles */
+  .trainer-card {
+    @apply bg-card border border-border rounded-lg overflow-hidden;
+    box-shadow: var(--shadow-elevated);
+    transition: var(--transition-smooth);
+  }
+
+  .trainer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-glow), var(--shadow-elevated);
+  }
+
+  .program-card {
+    @apply relative overflow-hidden rounded-lg h-96;
+    transition: var(--transition-smooth);
+  }
+
+  .program-card:hover {
+    transform: scale(1.02);
+  }
+
+  .program-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent;
+  }
+
+  /* Button Variants */
+  .btn-hero {
+    @apply bg-transparent border-2 border-primary text-primary px-8 py-4 font-bold text-lg tracking-wide;
+    transition: var(--transition-smooth);
+    background: linear-gradient(45deg, transparent, transparent);
+  }
+
+  .btn-hero:hover {
+    @apply bg-primary text-primary-foreground;
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-foreground px-6 py-3 font-semibold rounded;
+    transition: var(--transition-smooth);
+  }
+
+  .btn-accent:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Animation Classes */
+  .fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-hero {
+    background: hsl(var(--hero-bg));
+  }
+
+  .bg-section {
+    background: hsl(var(--section-bg));
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
