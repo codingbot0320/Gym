@@ -1,7 +1,11 @@
+import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-fitness.jpg';
+import RegistrationModal from './RegistrationModal';
 
 const HeroSection = () => {
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+
   return (
     <section id="home" className="hero-section">
       {/* Background Image */}
@@ -28,14 +32,13 @@ const HeroSection = () => {
           Experience training that challenges every limit.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center fade-in-up">
-          <button className="btn-hero group">
+        <div className="flex justify-center items-center fade-in-up">
+          <button 
+            onClick={() => setIsRegistrationOpen(true)}
+            className="btn-hero group"
+          >
             START YOUR JOURNEY
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-          </button>
-          
-          <button className="btn-accent">
-            WATCH OUR STORY
           </button>
         </div>
       </div>
@@ -46,6 +49,12 @@ const HeroSection = () => {
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
+
+      {/* Registration Modal */}
+      <RegistrationModal 
+        isOpen={isRegistrationOpen}
+        onClose={() => setIsRegistrationOpen(false)}
+      />
     </section>
   );
 };
