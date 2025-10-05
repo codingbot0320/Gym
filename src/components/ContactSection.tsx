@@ -81,9 +81,9 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold mb-1">Address</h4>
                   <p className="text-muted-foreground">
-                    123 Fitness Street<br />
+                    A2 Balewadi High Street<br />
                     Downtown District<br />
-                    City, State 12345
+                    Pune , Mahrashtra , India - 411045
                   </p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Phone</h4>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">+91 7894521630</p>
                 </div>
               </div>
 
@@ -104,7 +104,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Email</h4>
-                  <p className="text-muted-foreground">hello@elitefitness.com</p>
+                  <p className="text-muted-foreground">elitefitness@gmail.com</p>
                 </div>
               </div>
 

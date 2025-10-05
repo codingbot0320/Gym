@@ -1,4 +1,5 @@
 import { Calendar, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import cardioImage from '@/assets/cardio-program.jpg';
 import strengthImage from '@/assets/strength-program.jpg';
 
@@ -83,20 +84,23 @@ const BlogSection = () => {
                   {post.excerpt}
                 </p>
                 
-                <button className="flex items-center text-accent font-semibold text-sm tracking-wider hover:gap-2 transition-all duration-300 group">
+                <Link 
+                  to="/blog"
+                  className="flex items-center text-accent font-semibold text-sm tracking-wider hover:gap-2 transition-all duration-300 group"
+                >
                   VIEW HERE
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </button>
+                </Link>
               </div>
             </article>
           ))}
         </div>
 
         <div className="text-center mt-12">
-          <button className="btn-hero">
+          <Link to="/blog" className="btn-hero">
             VIEW ALL POSTS
             <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

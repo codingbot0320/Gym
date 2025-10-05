@@ -1,12 +1,12 @@
 import { Instagram, Linkedin, Twitter } from 'lucide-react';
-import trainer1 from '@/assets/trainer1.jpg';
+import trainer1 from '@/assets/Trainer 1.jpg';
 import trainer2 from '@/assets/trainer2.jpg';
 import trainer3 from '@/assets/trainer3.jpg';
 
 const TrainersSection = () => {
   const trainers = [
     {
-      name: 'MALATE SIMMS',
+      name: 'Niharika SINGH',
       title: 'CROSSFIT COACH',
       image: trainer1,
       specialties: ['Olympic Lifting', 'Functional Movement', 'Injury Prevention'],
@@ -18,7 +18,7 @@ const TrainersSection = () => {
       }
     },
     {
-      name: 'MADISON FREN',
+      name: 'Pranav KUMAR',
       title: 'CARDIO & CONDITIONING',
       image: trainer2,
       specialties: ['HIIT Training', 'Metabolic Conditioning', 'Weight Loss'],
@@ -30,7 +30,7 @@ const TrainersSection = () => {
       }
     },
     {
-      name: 'JOSHUA FRANKLIN',
+      name: 'Nikhil SHARMA',
       title: 'BODYBUILDING COACH',
       image: trainer3,
       specialties: ['Strength Training', 'Muscle Building', 'Competition Prep'],
