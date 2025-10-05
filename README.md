@@ -1,73 +1,55 @@
-# Welcome to your Lovable project
+# 🏋️‍♂️ Elire Fitness – Gym Branding & Website
 
-## Project info
+Welcome to **Elire Fitness**, a modern fitness brand dedicated to strength, transformation, and motivation.  
+This project showcases the **branding identity and website design** for Elire Fitness, blending power, motion, and technology into one sleek digital experience.
 
-**URL**: https://lovable.dev/projects/7406b3f9-5b96-4198-af06-cb1ce972254c
+---
 
-## How can I edit this code?
+## 🚀 Overview
 
-There are several ways of editing your application.
+**Elire Fitness** is more than just a gym — it’s a lifestyle movement.  
+The project includes a bold brand identity, dynamic visuals, and a responsive website designed to inspire fitness enthusiasts and attract new members.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7406b3f9-5b96-4198-af06-cb1ce972254c) and start prompting.
+## 🎯 Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- 💪 **Modern Gym Branding** – Strong typography, bold color palette, and consistent visual identity  
+- 🌐 **Responsive Website** – Built with HTML, CSS, and JavaScript (or React/Vite if applicable)  
+- 🎥 **Animated Hero Section** – Engaging video or motion background highlighting gym energy  
+- 📸 **Showcase of Facilities** – Display of equipment, training areas, and fitness programs  
+- 🧍‍♂️ **Trainer Profiles** – Meet our certified experts  
+- 💬 **Contact & Membership Form** – Easy sign-ups and inquiries  
+- 📱 **Fully Mobile-Optimized** – Smooth experience across all devices  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🧩 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Area | Tools / Technologies |
+|------|-----------------------|
+| **Frontend** | HTML, CSS, JavaScript / React / Vite |
+| **Design** | Figma / Adobe XD / Illustrator |
+| **Animations** | GSAP / Framer Motion / CSS Animations |
+| **Hosting** | Vercel / Netlify / GitHub Pages |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🎨 Branding Highlights
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Logo Concept:** Strength + Motion = Energy of Fitness  
+- **Color Palette:** Black ⚫ • Red 🔴 • White ⚪ – representing power, passion, and purity  
+- **Typography:** Bold, clean sans-serif fonts for impact  
+- **Tagline:** *“Train. Transform. Triumph.”*  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🧠 Inspiration
 
-**Edit a file directly in GitHub**
+Elire Fitness branding was inspired by modern athletic brands and aims to represent **discipline, determination, and empowerment**.  
+The visuals and website were built to motivate individuals to push their limits — both physically and mentally.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 🏗️ Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/7406b3f9-5b96-4198-af06-cb1ce972254c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
